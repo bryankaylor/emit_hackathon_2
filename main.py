@@ -1,6 +1,6 @@
 
 def main():
-    print("EMIT Hackathon 2")
+    print("EMIT Hackathon 2 for Jason")
 
 
 if __name__ == "__main__":
