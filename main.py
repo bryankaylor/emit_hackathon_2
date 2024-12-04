@@ -1,7 +1,11 @@
 
+import os
+import time
 import pyaedt
 from ansys.aedt.core.emit_core.emit_constants import TxRxMode, ResultType
 
+timestamp = time.time()
+os.environ["ANSYSCL_SESSION_ID"] = f"DUMMY_VALUE_{timestamp:0.0f}"
 
 def main():
     print("EMIT Hackathon 2 for Jason")
