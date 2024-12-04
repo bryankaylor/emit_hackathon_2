@@ -7,6 +7,7 @@ from ansys.aedt.core.emit_core.emit_constants import TxRxMode, ResultType
 timestamp = time.time()
 os.environ["ANSYSCL_SESSION_ID"] = f"DUMMY_VALUE_{timestamp:0.0f}"
 
+
 def main():
     print("EMIT Hackathon 2 for Jason")
     print("Thanks, Bryan!")
@@ -39,21 +40,32 @@ def main():
 
     domain.set_receiver(victim, victim_band)
     domain.set_interferer(aggressor, aggressor_band)
-    interaction = revision.run(domain)
 
-    for aggressor_frequency in aggressor_frequencies:
-        domain.set_interferer(aggressor, aggressor_band, aggressor_frequency)
-        for victim_frequency in victim_frequencies:
-            domain.set_receiver(victim, victim_band, victim_frequency)
+    with revision.get_license_session():
+        interaction = revision.run(domain)
 
-            instance = interaction.get_instance(domain)
+        text_results = ""
 
-            if instance.has_valid_values():
-                emi = instance.get_value(ResultType.EMI)
-                print(f'({victim_frequency}, {aggressor_frequency}) = {emi}')
-            else:
-                warning = instance.get_result_warning()
-                print(f'No valid values: {warning}')
+        for aggressor_frequency in aggressor_frequencies:
+            domain.set_interferer(aggressor, aggressor_band, aggressor_frequency)
+            for victim_frequency in victim_frequencies:
+                domain.set_receiver(victim, victim_band, victim_frequency)
+
+                instance = interaction.get_instance(domain)
+
+                if instance.has_valid_values():
+                    emi = instance.get_value(ResultType.EMI) # dB
+                    power_at_rx = instance.get_value(ResultType.POWER_AT_RX) # dBM
+                    text_result = f'({victim_frequency}, {aggressor_frequency}) = ({emi}, {power_at_rx})\n'
+                    text_results += text_result
+                else:
+                    warning = instance.get_result_warning()
+                    print(f'No valid values: {warning}')
+
+    print(text_results)
+
+    with open("data.txt", 'w') as file:
+        file.write(text_results)
 
     pass
 
