@@ -93,7 +93,7 @@ class Form(QDialog):
 
     def aggressor_changed(self):
         self.aggressorBandComboBox.clear()
-        aggressor = self.victimComboBox.currentText()
+        aggressor = self.aggressorComboBox.currentText()
         aggressor_bands = self.revision.get_band_names(aggressor, TxRxMode.TX)
         self.aggressorBandComboBox.addItems(aggressor_bands)
 
@@ -107,7 +107,7 @@ class Form(QDialog):
         emi, rx_power, desense, sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band, victim_band, self.domain, self.revision)
 
         for row in emi:
-            print(f'{row}\n')
+            print(f'{row}')
 
 
 def main():
