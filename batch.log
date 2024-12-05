@@ -408,3 +408,128 @@ Project directory: D:\Designs\Electronics_Desktop_2024
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
 Stopping Batch Run: 9:16:08 AM  Dec 05, 2024
+ 
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
+Non Graphical Mode: No Project??
+Starting Batch Run: 10:37:29 AM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
+-- Message Window --
+      *Global - Messages
+        [info] GRPC server running on port: 62583. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
+        [info] Project AH-64 Apache Cosite has been opened.
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] Active Design set to 118;Apache Cosite
+        [info] Aedt Objects correctly read
+        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
+        [info] ModelerEmit class has been initialized!
+        [info] Project AH-64 Apache Cosite Saved correctly
+-- Message Window --
+Stopping Batch Run: 10:38:36 AM  Dec 05, 2024
+ 
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
+Non Graphical Mode: No Project??
+Starting Batch Run: 10:39:06 AM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
+-- Message Window --
+      *Global - Messages
+        [info] GRPC server running on port: 62663. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
+        [info] Project AH-64 Apache Cosite has been opened.
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] Active Design set to 118;Apache Cosite
+        [info] Aedt Objects correctly read
+        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
+        [info] ModelerEmit class has been initialized!
+        [info] Project AH-64 Apache Cosite Saved correctly
+-- Message Window --
+Stopping Batch Run: 10:40:13 AM  Dec 05, 2024
+ 
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
+Non Graphical Mode: No Project??
+Starting Batch Run: 10:41:19 AM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
+-- Message Window --
+      *Global - Messages
+        [info] GRPC server running on port: 62811. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
+        [info] Project AH-64 Apache Cosite has been opened.
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] Active Design set to 118;Apache Cosite
+        [info] Aedt Objects correctly read
+        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
+        [info] ModelerEmit class has been initialized!
+        [info] Project AH-64 Apache Cosite Saved correctly
+-- Message Window --
+Stopping Batch Run: 10:42:24 AM  Dec 05, 2024
+ 
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
+Non Graphical Mode: No Project??
+Starting Batch Run: 11:19:11 AM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
+[warning] Electronics Desktop cannot be closed right now because it is being used by another application, script or extension wizard.
+
+[warning] Electronics Desktop cannot be closed right now because it is being used by another application, script or extension wizard.
+
+[warning] Electronics Desktop cannot be closed right now because it is being used by another application, script or extension wizard.
+
+[warning] Electronics Desktop cannot be closed right now because it is being used by another application, script or extension wizard.
+
+[warning] Electronics Desktop cannot be closed right now because it is being used by another application, script or extension wizard.
+
+[warning] Electronics Desktop cannot be closed right now because it is being used by another application, script or extension wizard.
+
+ 
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
+Non Graphical Mode: No Project??
+Starting Batch Run: 11:20:34 AM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
+-- Message Window --
+      *Global - Messages
+        [info] GRPC server running on port: 64597. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
+        [info] Project AH-64 Apache Cosite has been opened.
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 7sec
+        [info] Active Design set to 118;Apache Cosite
+        [info] Aedt Objects correctly read
+        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
+        [info] ModelerEmit class has been initialized!
+        [info] Project AH-64 Apache Cosite Saved correctly
+-- Message Window --
+Stopping Batch Run: 11:21:41 AM  Dec 05, 2024
+ 
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
+Non Graphical Mode: No Project??
+Starting Batch Run: 11:22:01 AM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
+-- Message Window --
+      *Global - Messages
+        [info] GRPC server running on port: 64681. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
+        [info] Project AH-64 Apache Cosite has been opened.
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
+        [info] Active Design set to 118;Apache Cosite
+        [info] Aedt Objects correctly read
+        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
+        [info] ModelerEmit class has been initialized!
+        [info] Project AH-64 Apache Cosite Saved correctly
+-- Message Window --
+Stopping Batch Run: 11:23:08 AM  Dec 05, 2024

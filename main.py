@@ -9,14 +9,10 @@ os.environ["ANSYSCL_SESSION_ID"] = f"DUMMY_VALUE_{timestamp:0.0f}"
 
 
 def main():
-    print("EMIT Hackathon 2 for Jason")
-    print("Thanks, Bryan!")
 
-    project = r'D:\Designs\Electronics_Desktop_2024\EMIT\AH-64 Apache Cosite.aedt'
-    desktop = pyaedt.Desktop(specified_version="2024.2", new_desktop=True)
-#    project = r'C:\Users\bkaylor\Downloads\AH-64 Apache Cosite.aedt'
-#    desktop = pyaedt.Desktop(specified_version="2025.1", new_desktop=True)
-    print(f'{desktop.aedt_process_id}')
+    project = r'D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt'
+    desktop = pyaedt.Desktop(specified_version="2025.1", new_desktop=True)
+
 
     emit = pyaedt.Emit(project=project)
     revision = emit.results.analyze()
@@ -64,7 +60,7 @@ def main():
                     sensitivity = instance.get_value(ResultType.SENSITIVITY)
                     text_result = f'({victim_frequency}, {aggressor_frequency}) = ({emi}, {power_at_rx})\n'
                     text_results += text_result
-                    pivot_results += f'({aggressor},{aggressor_band},{aggressor_frequency},{victim},{victim_band},{victim_frequency},{emi},{power_at_rx},{desense},{sensitivity})\n'
+                    pivot_results += f'{aggressor},{aggressor_band},{aggressor_frequency},{victim},{victim_band},{victim_frequency},{emi},{power_at_rx},{desense},{sensitivity}\n'
                 else:
                     warning = instance.get_result_warning()
                     print(f'No valid values: {warning}')
