@@ -3,7 +3,7 @@ import os
 import sys
 
 import PySide6.QtCore
-from PySide6.QtWidgets import QApplication, QDialog, QLineEdit, QPushButton, QVBoxLayout, QFormLayout, QComboBox, QFileDialog
+from PySide6.QtWidgets import QApplication, QDialog, QLineEdit, QPushButton, QFormLayout, QComboBox, QFileDialog
 
 print(f'{PySide6.__version__} {PySide6.QtCore.__version__}')
 
@@ -64,7 +64,8 @@ class Form(QDialog):
 
         project = self.projectTextBox.text()
         project_exists = os.path.exists(project)
-        if project_exists:
+        project_is_aedt = (os.path.splitext(project)[1] == ".aedt")
+        if project_exists and project_is_aedt:
             print(f'Loading project {self.projectTextBox.text()}')
             victims = ["V1", "V2", "V3"]
             aggressors = ["A1", "A2", "A3"]
