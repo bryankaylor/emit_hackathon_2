@@ -13,6 +13,7 @@
 import pyaedt
 from ansys.aedt.core.emit_core.emit_constants import TxRxMode, ResultType
 
+
 def get_radios(project, version):
     # Launch the EMIT design of interest
     #
@@ -32,21 +33,12 @@ def get_radios(project, version):
 
     return aggressors, victims, domain, revision
 
-def tx_rx_response(aggressor, victim, domain, revision):
-    # Find all the Tx aggressor bands and Rx victim bands
-    #
-    aggressor_bands = revision.get_band_names(aggressor, TxRxMode.TX)
-    victim_bands    = revision.get_band_names(victim, TxRxMode.RX)
 
-    # For now, this is hard coded to select the first band. Flexibility should be added later
-    #
-    aggressor_band = aggressor_bands[0]
-    victim_band    = victim_bands[0]
-
+def tx_rx_response(aggressor, victim, aggressor_band, victim_band, domain, revision):
     # For the given bands, extract all of the channels for each
     #
-    aggressor_frequencies = revision.get_active_frequencies(aggressor, aggressor_bands[0], TxRxMode.TX)
-    victim_frequencies    = revision.get_active_frequencies(victim,    victim_bands[0],    TxRxMode.RX)
+    aggressor_frequencies = revision.get_active_frequencies(aggressor, aggressor_band, TxRxMode.TX)
+    victim_frequencies    = revision.get_active_frequencies(victim,    victim_band,    TxRxMode.RX)
 
     # I believe that this is for tying to where all of the results will reside?
     domain.set_receiver(victim, victim_band)
