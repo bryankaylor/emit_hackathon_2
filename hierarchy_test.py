@@ -17,6 +17,7 @@ aggressor_bands = revision.get_band_names(aggressor, TxRxMode.TX)
 
 aggressor_band = aggressor_bands[0]
 victim_band    = victim_bands[0]
+
 emi, rx_power, desense, sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band, victim_band, domain, revision)
 
 file = 'D:\Designs\Electronics_Desktop_2025\EMIT\Apache.csv'
