@@ -10,7 +10,7 @@ plt.plot(x, y, marker='o')
 # Add title and labels
 plt.title('Sample XY Plot')
 plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
+plt.ylabel('Y-axis for Jason')
 
 # Show the plot
 plt.show()
