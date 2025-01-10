@@ -345,20 +345,19 @@ Project directory: D:\Designs\Electronics_Desktop_2024
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
- 
-Ansys Electronics Desktop Version 2024.2.1, Build: 2024-09-11 12:32:24
-Location: C:\Program Files\AnsysEM\v242\Win64\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 9:11:07 AM  Dec 05, 2024
-Running as user : ANSYS\estaggs
-Temp directory: C:\Users\estaggs\AppData\Local\Temp
-Project directory: D:\Designs\Electronics_Desktop_2024
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 59248. 
+        [info] GRPC server running on port: 58718. 
         [info] Parsing D:\Designs\Electronics_Desktop_2024\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\Designs\Electronics_Desktop_2024\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 7sec
+        [info] File D:\Designs\Electronics_Desktop_2024\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] Active Design set to 118;Apache Cosite
+        [info] Aedt Objects correctly read
+        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
+        [info] ModelerEmit class has been initialized!
+        [info] Project AH-64 Apache Cosite Saved correctly
+-- Message Window --
+rrectly loaded. Elapsed time: 0m 7sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
@@ -534,749 +533,358 @@ Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
 Stopping Batch Run: 11:23:08 AM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 3:50:52 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 11:36:58 AM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 64372. 
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 78, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 17, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] AEDT API Error on __init__
-        [error] Last Electronics Desktop Message - [error] script macro error: the project file path d:/designs/electronics_desktop_2025/emit/ah-64 apache cosite.aedt is invalid. the project file path cannot be empty and the directory must already exist. the charact
-        [error] ers \/:*?<>| cannot be in the project name and there must be no leading or trailing spaces. (03:51:01 pm  dec 09, 2024)  
-        [error] Method arguments: 
-        [error]     project = D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt 
-        [error] **************************************************************
--- Message Window --
-Stopping Batch Run: 3:51:02 PM  Dec 09, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 4:01:05 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 64692. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 65194. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 4:01:22 PM  Dec 09, 2024
+Stopping Batch Run: 11:38:04 AM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 4:36:49 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 2:16:22 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 65342. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 60369. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
+        [info] Active Design set to 118;Apache Cosite
+        [info] Aedt Objects correctly read
+        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
+        [info] ModelerEmit class has been initialized!
+-- Message Window --
+Stopping Batch Run: 2:16:38 PM  Dec 05, 2024
+ 
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
+Non Graphical Mode: No Project??
+Starting Batch Run: 2:17:34 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
+-- Message Window --
+      *Global - Messages
+        [info] GRPC server running on port: 60434. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
+        [info] Project AH-64 Apache Cosite has been opened.
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] Active Design set to 118;Apache Cosite
+        [info] Aedt Objects correctly read
+        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
+        [info] ModelerEmit class has been initialized!
+-- Message Window --
+Stopping Batch Run: 2:27:18 PM  Dec 05, 2024
+ 
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
+Non Graphical Mode: No Project??
+Starting Batch Run: 2:29:37 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
+-- Message Window --
+      *Global - Messages
+        [info] GRPC server running on port: 60876. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
+        [info] Project AH-64 Apache Cosite has been opened.
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 4:37:09 PM  Dec 09, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 4:44:50 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 49206. 
--- Message Window --
-Stopping Batch Run: 4:45:00 PM  Dec 09, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 4:45:07 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 49248. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 60876. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
--- Message Window --
-Stopping Batch Run: 4:45:58 PM  Dec 09, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 4:46:01 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 49357. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
--- Message Window --
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 49357. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
--- Message Window --
-rive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 9sec
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
--- Message Window --
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 49791. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 9sec
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
--- Message Window --
-rive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 8sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 5:07:12 PM  Dec 09, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 5:11:13 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 50378. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
-        [info] Project AH-64 Apache Cosite Saved correctly
--- Message Window --
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 50378. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
-        [info] Project AH-64 Apache Cosite Saved correctly
--- Message Window --
-correctly loaded. Elapsed time: 0m 9sec
+rrectly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 5:37:30 PM  Dec 09, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 5:44:51 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 51201. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 61072. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 5:45:18 PM  Dec 09, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 5:58:06 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 51568. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+rrectly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 5:58:27 PM  Dec 09, 2024
+Stopping Batch Run: 2:36:51 PM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 6:04:40 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 2:38:35 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 51757. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 61336. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 6:05:01 PM  Dec 09, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 6:16:09 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 52115. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 61336. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 7sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 6:16:27 PM  Dec 09, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 6:19:54 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 52234. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+rrectly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 6:20:13 PM  Dec 09, 2024
+Stopping Batch Run: 2:41:42 PM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 6:20:55 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 2:48:43 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 52306. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 61900. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 6:21:43 PM  Dec 09, 2024
+Stopping Batch Run: 2:48:59 PM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 6:36:28 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 2:49:25 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 52613. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 62052. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 6:39:13 PM  Dec 09, 2024
+Stopping Batch Run: 2:52:07 PM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 6:39:50 PM  Dec 09, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 2:53:04 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 52729. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 62210. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 5:42:57 AM  Dec 10, 2024
+Stopping Batch Run: 2:54:09 PM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 9:12:54 AM  Dec 11, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 2:57:16 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 51737. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 62442. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 9:27:20 AM  Dec 11, 2024
+Stopping Batch Run: 2:58:25 PM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 8:57:26 AM  Dec 20, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 3:47:39 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 63483. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 64095. 
+        [info] Parsing D:/Designs/Electronics_Desktop_2025/EMIT/AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [error] **************************************************************
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 42sec
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 19, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] AEDT API Error on active_design
-        [error] Last Electronics Desktop Message - [error] script macro error: access to the requested resource is not permitted. (08:58:17 am  dec 20, 2024)  
-        [error] Method arguments: 
-        [error]     project_object = Instance of an Aedt object:22 
-        [error]     name = 118;Apache Cosite 
-        [error]     design_type = EMIT 
-        [error] **************************************************************
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 19, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] 'nonetype' object has no attribute 'getallcomponents' on refresh_all_ids
-        [error] Last Electronics Desktop Message - [error] script macro error: access to the requested resource is not permitted. (08:58:17 am  dec 20, 2024)  
-        [error] **************************************************************
-        [info] ModelerEmit class has been initialized!
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 19, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] AEDT API Error on active_design
-        [error] Last Electronics Desktop Message - [error] script macro error: the project is not activated (08:58:18 am  dec 20, 2024)  
-        [error] Method arguments: 
-        [error]     project_object = Instance of an Aedt object:105 
-        [error] **************************************************************
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 20, in main
-        [error]     revision = emit.results.analyze()
-        [error] 'bool' object has no attribute 'getcurrentresult' on _add_revision
-        [error] Last Electronics Desktop Message - [error] script macro error: the project is not activated (08:58:18 am  dec 20, 2024)  
-        [error] **************************************************************
--- Message Window --
-Stopping Batch Run: 8:58:20 AM  Dec 20, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 9:02:51 AM  Dec 20, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 58411. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 41sec
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 19, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] AEDT API Error on active_design
-        [error] Last Electronics Desktop Message - [error] script macro error: access to the requested resource is not permitted. (09:03:42 am  dec 20, 2024)  
-        [error] Method arguments: 
-        [error]     project_object = Instance of an Aedt object:22 
-        [error]     name = 118;Apache Cosite 
-        [error]     design_type = EMIT 
-        [error] **************************************************************
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 19, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] 'nonetype' object has no attribute 'getallcomponents' on refresh_all_ids
-        [error] Last Electronics Desktop Message - [error] script macro error: access to the requested resource is not permitted. (09:03:42 am  dec 20, 2024)  
-        [error] **************************************************************
-        [info] ModelerEmit class has been initialized!
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 19, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] AEDT API Error on active_design
-        [error] Last Electronics Desktop Message - [error] script macro error: the project is not activated (09:03:43 am  dec 20, 2024)  
-        [error] Method arguments: 
-        [error]     project_object = Instance of an Aedt object:105 
-        [error] **************************************************************
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 20, in main
-        [error]     revision = emit.results.analyze()
-        [error] 'bool' object has no attribute 'getcurrentresult' on _add_revision
-        [error] Last Electronics Desktop Message - [error] script macro error: the project is not activated (09:03:43 am  dec 20, 2024)  
-        [error] **************************************************************
--- Message Window --
-Stopping Batch Run: 9:03:45 AM  Dec 20, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 9:06:36 AM  Dec 20, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 58646. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 41sec
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 19, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] AEDT API Error on active_design
-        [error] Last Electronics Desktop Message - [error] script macro error: access to the requested resource is not permitted. (09:07:25 am  dec 20, 2024)  
-        [error] Method arguments: 
-        [error]     project_object = Instance of an Aedt object:22 
-        [error]     name = 118;Apache Cosite 
-        [error]     design_type = EMIT 
-        [error] **************************************************************
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 19, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] 'nonetype' object has no attribute 'getallcomponents' on refresh_all_ids
-        [error] Last Electronics Desktop Message - [error] script macro error: access to the requested resource is not permitted. (09:07:25 am  dec 20, 2024)  
-        [error] **************************************************************
-        [info] ModelerEmit class has been initialized!
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 19, in main
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] AEDT API Error on active_design
-        [error] Last Electronics Desktop Message - [error] script macro error: the project is not activated (09:07:26 am  dec 20, 2024)  
-        [error] Method arguments: 
-        [error]     project_object = Instance of an Aedt object:105 
-        [error] **************************************************************
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 121, in <module>
-        [error]     main()
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\main.py", line 20, in main
-        [error]     revision = emit.results.analyze()
-        [error] 'bool' object has no attribute 'getcurrentresult' on _add_revision
-        [error] Last Electronics Desktop Message - [error] script macro error: the project is not activated (09:07:26 am  dec 20, 2024)  
-        [error] **************************************************************
--- Message Window --
-Stopping Batch Run: 9:07:27 AM  Dec 20, 2024
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 10:03:31 AM  Dec 20, 2024
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 51142. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] File D:/Designs/Electronics_Desktop_2025/EMIT/AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 12:10:18 PM  Dec 20, 2024
+Stopping Batch Run: 3:49:39 PM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 2:10:33 PM  Jan 09, 2025
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 3:56:49 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 58497. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 64502. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 0sec
+-- Message Window --
+Stopping Batch Run: 3:57:06 PM  Dec 05, 2024
+ 
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
+Non Graphical Mode: No Project??
+Starting Batch Run: 3:59:45 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
+-- Message Window --
+      *Global - Messages
+        [info] GRPC server running on port: 64647. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
+        [info] Project AH-64 Apache Cosite has been opened.
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
+        [info] Active Design set to 118;Apache Cosite
+        [info] Aedt Objects correctly read
+        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
+        [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 2:15:31 PM  Jan 09, 2025
+Stopping Batch Run: 4:00:48 PM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 2:16:37 PM  Jan 09, 2025
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 4:13:11 PM  Dec 05, 2024
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 51047. 
-        [info] Parsing D:/OneDrive - ANSYS, Inc/Documents/GitHub/AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 65151. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:/OneDrive - ANSYS, Inc/Documents/GitHub/AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 5sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
         [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 2:21:19 PM  Jan 09, 2025
+Stopping Batch Run: 4:14:16 PM  Dec 05, 2024
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 2:29:10 PM  Jan 09, 2025
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
+Starting Batch Run: 3:00:51 PM  Jan 09, 2025
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
 -- Message Window --
       *Global - Messages
-        [info] GRPC server running on port: 51506. 
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\hierarchy_test.py", line 8, in <module>
-        [error]     aggressors, victims, domain, revision = tx_rx_response.get_radios(project,"2025.1")
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\tx_rx_response.py", line 25, in get_radios
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] AEDT API Error on __init__
-        [error] Last Electronics Desktop Message - [error] script macro error: the project file path d:/designs/electronics_desktop_2025/emit/ah-64 apache cosite.aedt is invalid. the project file path cannot be empty and the directory must already exist. the charact
-        [error] ers \/:*?<>| cannot be in the project name and there must be no leading or trailing spaces. (02:29:20 pm  jan 09, 2025)  
-        [error] Method arguments: 
-        [error]     project = D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt 
-        [error] **************************************************************
--- Message Window --
-Stopping Batch Run: 2:29:22 PM  Jan 09, 2025
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 2:30:29 PM  Jan 09, 2025
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 51581. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
+        [info] GRPC server running on port: 52499. 
+        [info] Parsing D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt.
         [info] Project AH-64 Apache Cosite has been opened.
-        [info] Active Design set to 118;Apache Cosite
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 7sec
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
--- Message Window --
-Stopping Batch Run: 2:30:47 PM  Jan 09, 2025
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 2:32:21 PM  Jan 09, 2025
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 51695. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] Active Design set to 118;Apache Cosite
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
--- Message Window --
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 2:37:11 PM  Jan 09, 2025
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 51891. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
+        [info] File D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 6sec
         [info] Active Design set to 118;Apache Cosite
         [info] Aedt Objects correctly read
         [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
         [info] ModelerEmit class has been initialized!
+        [info] Project AH-64 Apache Cosite Saved correctly
 -- Message Window --
-Stopping Batch Run: 2:37:29 PM  Jan 09, 2025
+Stopping Batch Run: 3:02:01 PM  Jan 09, 2025
  
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
+Ansys Electronics Desktop Version 2025.1.0, Build: 2024-07-25 02:25:26
+Location: C:\Program Files\AnsysEM\v251\Win64\ansysedt.exe
 Non Graphical Mode: No Project??
-Starting Batch Run: 2:59:43 PM  Jan 09, 2025
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 52412. 
-        [error] **************************************************************
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\hierarchy_test.py", line 8, in <module>
-        [error]     aggressors, victims, domain, revision = tx_rx_response.get_radios(project,"2025.1")
-        [error]   File "D:\OneDrive - ANSYS, Inc\Documents\GitHub\emit_hackathon_2\tx_rx_response.py", line 25, in get_radios
-        [error]     emit = pyaedt.Emit(project=project)
-        [error] AEDT API Error on __init__
-        [error] Last Electronics Desktop Message - [error] script macro error: the project file path d:/designs/electronics_desktop_2025/emit/ah-64 apache cosite.aedt is invalid. the project file path cannot be empty and the directory must already exist. the charact
-        [error] ers \/:*?<>| cannot be in the project name and there must be no leading or trailing spaces. (02:59:52 pm  jan 09, 2025)  
-        [error] Method arguments: 
-        [error]     project = D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt 
-        [error] **************************************************************
--- Message Window --
-Stopping Batch Run: 2:59:53 PM  Jan 09, 2025
- 
-Ansys Electronics Desktop Version 2025.1.0, Build: 2024-11-30 15:03:33
-Location: C:\Program Files\ANSYS Inc\v251\AnsysEM\ansysedt.exe
-Non Graphical Mode: No Project??
-Starting Batch Run: 3:01:03 PM  Jan 09, 2025
-Running as user : ANSYS\jbommer
-Temp directory: C:\Users\jbommer\AppData\Local\Temp
-Project directory: C:\Users\jbommer\Documents\Ansoft
--- Message Window --
-      *Global - Messages
-        [info] GRPC server running on port: 52449. 
-        [info] Parsing D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt.
-        [info] Project AH-64 Apache Cosite has been opened.
-        [info] File D:\OneDrive - ANSYS, Inc\Documents\GitHub\AH-64 Apache Cosite.aedt correctly loaded. Elapsed time: 0m 8sec
-        [info] Active Design set to 118;Apache Cosite
-        [info] Aedt Objects correctly read
-        [info] ModelerCircuit class has been initialized! Elapsed time: 0m 0sec
-        [info] ModelerEmit class has been initialized!
--- Message Window --
-Stopping Batch Run: 3:01:23 PM  Jan 09, 2025
+Starting Batch Run: 3:03:22 PM  Jan 09, 2025
+Running as user : ANSYS\estaggs
+Temp directory: C:\Users\estaggs\AppData\Local\Temp
+Project directory: D:\Designs\Electronics_Desktop_2025
