@@ -39,8 +39,8 @@ class Form(QDialog):
         self.victimBandComboBox = QComboBox()
         self.aggressorBandComboBox = QComboBox()
 
-        self.generateDataButton = QPushButton("Generate")
-        self.waterfallButton = QPushButton("Waterfall")
+        self.generateDataButton = QPushButton("Export CSV File")
+        self.waterfallButton = QPushButton("Generate Waterfall EMI Plot")
 
         # Layout
         layout = QFormLayout()
