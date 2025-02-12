@@ -3,9 +3,13 @@ import os
 import sys
 import time
 
+import matplotlib.pyplot as plt
+import numpy as np
+
 from ansys.aedt.core.emit_core.emit_constants import TxRxMode
 
 import tx_rx_response
+import Claude_Test_EMI_Waterfall
 
 import PySide6.QtCore
 from PySide6.QtWidgets import QApplication, QDialog, QLineEdit, QPushButton, QFormLayout, QComboBox, QFileDialog
@@ -35,6 +39,7 @@ class Form(QDialog):
         self.aggressorBandComboBox = QComboBox()
 
         self.generateDataButton = QPushButton("Generate")
+        self.waterfallButton = QPushButton("Waterfall")
 
         # Layout
         layout = QFormLayout()
@@ -45,6 +50,7 @@ class Form(QDialog):
         layout.addRow("Aggressor:", self.aggressorComboBox)
         layout.addRow("Aggressor band:", self.aggressorBandComboBox)
         layout.addRow(self.generateDataButton)
+        layout.addRow(self.waterfallButton)
 
         self.setLayout(layout)
 
@@ -54,6 +60,7 @@ class Form(QDialog):
         self.victimComboBox.currentTextChanged.connect(self.victim_changed)
         self.aggressorComboBox.currentTextChanged.connect(self.aggressor_changed)
         self.generateDataButton.clicked.connect(self.generate)
+        self.waterfallButton.clicked.connect(self.waterfall)
 
     def browse(self):
         dialog = QFileDialog()
@@ -109,6 +116,17 @@ class Form(QDialog):
         for row in emi:
             print(f'{row}')
 
+    def waterfall(self):
+        victim = self.victimComboBox.currentText()
+        victim_band = self.victimBandComboBox.currentText()
+        aggressor = self.aggressorComboBox.currentText()
+        aggressor_band = self.aggressorBandComboBox.currentText()
+
+        print(f'Generating data for {victim}:{victim_band} vs {aggressor}:{aggressor_band}')
+        emi, rx_power, desense, sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band, victim_band, self.domain, self.revision)
+        data = np.array(np.transpose(emi))
+        Claude_Test_EMI_Waterfall.plot_matrix_heatmap(data, title="Sample Matrix Visualization")
+        plt.show()
 
 def main():
     app = QApplication(sys.argv)
