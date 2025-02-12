@@ -13,7 +13,7 @@ os.environ["ANSYSCL_SESSION_ID"] = f"DUMMY_VALUE_{timestamp:0.0f}"
 
 
 def get_data():
-    project = r'C:\Program Files\ANSYS Inc\v252\AnsysEM\Examples\EMIT\AH-64 Apache Cosite.aedt'
+    project = r'D:/OneDrive - ANSYS, Inc/Documents/GitHub/AH-64 Apache Cosite.aedt'
     desktop = pyaedt.Desktop(specified_version="2025.1", new_desktop=True)
 
     emit = pyaedt.Emit(project=project)
@@ -37,8 +37,8 @@ def get_data():
     emi, rx_power, desense, sensitivity = tx_rx_response(aggressor, victim, aggressor_band, victim_band, domain, revision)
     return emi
 
-
-def plot_matrix_heatmap(data, min_val=None, max_val=None, title="Matrix Heatmap",
+#xlabel = "Tx channels", ylabel= "Rx channel",
+def plot_matrix_heatmap(data, min_val=None, max_val=None,xlabel = "column index", ylabel= "row index", xticks=None, yticks=None, title="Matrix Heatmap",
                         cmap='rainbow', show_values=True, figsize=(10, 8)):
     """
     Create a 2D heatmap visualization of a matrix using a rainbow color scale.
@@ -71,16 +71,17 @@ def plot_matrix_heatmap(data, min_val=None, max_val=None, title="Matrix Heatmap"
         max_val = np.max(data)
 
     # Create the heatmap
-    im = plt.imshow(data, cmap=cmap, vmin=min_val, vmax=max_val)
+    im = plt.imshow(data, cmap=cmap, vmin=min_val, vmax=max_val) #extent=[xticks[0],xticks[-1],yticks[0],yticks[-1]])
 
     # Add colorbar
     plt.colorbar(im, label='Values')
 
     # Add title and labels
     plt.title(title)
-    plt.xlabel('Column Index')
-    plt.ylabel('Row Index')
-
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.xticks(range(len(xticks)), xticks)
+    plt.yticks(range(len(yticks)), yticks)
     # Show numerical values in each cell if requested
     if show_values:
         for i in range(data.shape[0]):
@@ -101,5 +102,5 @@ if __name__ == "__main__":
     data = np.array(np.transpose(data))
 
     # Create visualization
-    plot_matrix_heatmap(data, title="Sample Matrix Visualization")
+    plot_matrix_heatmap(data, title="EMI Waterfall")
     plt.show()

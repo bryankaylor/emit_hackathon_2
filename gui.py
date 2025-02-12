@@ -125,7 +125,11 @@ class Form(QDialog):
         print(f'Generating data for {victim}:{victim_band} vs {aggressor}:{aggressor_band}')
         emi, rx_power, desense, sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band, victim_band, self.domain, self.revision)
         data = np.array(np.transpose(emi))
-        Claude_Test_EMI_Waterfall.plot_matrix_heatmap(data, title="Sample Matrix Visualization")
+
+        aggressor_frequencies = self.revision.get_active_frequencies(aggressor, aggressor_band, TxRxMode.TX)
+        victim_frequencies = self.revision.get_active_frequencies(victim, victim_band, TxRxMode.RX)
+
+        Claude_Test_EMI_Waterfall.plot_matrix_heatmap(data, xticks=aggressor_frequencies, yticks=victim_frequencies, xlabel = "Tx channels", ylabel= "Rx channel", title="EMI Waterfall {}".format(self.projectTextBox.text()))
         plt.show()
 
 def main():
