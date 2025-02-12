@@ -49,9 +49,6 @@ def tx_rx_response(aggressor, victim, aggressor_band, victim_band, domain, revis
     interaction = revision.run(domain)
     with revision.get_license_session():
 
-        text_results = ""
-        pivot_results = "Agressor_Radio,Aggressor_Band,Agg_Channel,Victim_Radio,Victim_Band,Vic_Channel,EMI,RX_Power,Desense,Sensitivity \n"
-
         emi=[]
         rx_power=[]
         desense=[]

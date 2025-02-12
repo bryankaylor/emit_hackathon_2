@@ -10,6 +10,7 @@ from ansys.aedt.core.emit_core.emit_constants import TxRxMode
 
 import tx_rx_response
 import Claude_Test_EMI_Waterfall
+import export_csv
 
 import PySide6.QtCore
 from PySide6.QtWidgets import QApplication, QDialog, QLineEdit, QPushButton, QFormLayout, QComboBox, QFileDialog
@@ -113,8 +114,12 @@ class Form(QDialog):
         print(f'Generating data for {victim}:{victim_band} vs {aggressor}:{aggressor_band}')
         emi, rx_power, desense, sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band, victim_band, self.domain, self.revision)
 
-        for row in emi:
-            print(f'{row}')
+        aggressor_frequencies = self.revision.get_active_frequencies(aggressor, aggressor_band, TxRxMode.TX)
+        victim_frequencies = self.revision.get_active_frequencies(victim, victim_band, TxRxMode.RX)
+
+        export_csv.export_csv("D:/pivot_table.csv", emi, rx_power, desense, sensitivity, aggressor, aggressor_band, aggressor_frequencies, victim, victim_band, victim_frequencies)
+        #for row in emi:
+        #   print(f'{row}')
 
     def waterfall(self):
         victim = self.victimComboBox.currentText()

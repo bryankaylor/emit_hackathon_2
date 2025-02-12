@@ -1,35 +1,19 @@
-def export_csv(file, emi, rx_power, desense, sensitivity, aggressor, victim, aggressor_band, victim_band):
+def export_csv(csv_file, emi, rx_power, desense, sensitivity, aggressor, aggressor_band, aggressor_frequencies, victim, victim_band, victim_frequencies):
 
-    victim_frequencies = revision.get_active_frequencies(victim, victim_bands[0], TxRxMode.RX)
-    aggressor_frequencies = revision.get_active_frequencies(aggressor, aggressor_bands[0], TxRxMode.TX)
+    pivot_results = "Agressor_Radio,Aggressor_Band,Aggressor_Channel,Victim_Radio,Victim_Band,Victim_Channel,EMI,RX_Power,Desense,Sensitivity \n"
 
-    for aggressor_frequency in aggressor_frequencies:
+    for aggressor_index in range(len(aggressor_frequencies)):
 
-        emi_line=[]
-        rx_power_line=[]
-        desense_line=[]
-        sensitivity_line=[]
-        domain.set_interferer(aggressor, aggressor_band, aggressor_frequency)
+        aggressor_frequency = aggressor_frequencies[aggressor_index]
+        for victim_index in range(len(victim_frequencies)):
 
-        for victim_frequency in victim_frequencies:
+            victim_frequency    = victim_frequencies[victim_index]
 
-            #print(f'aggressor_frequency = {aggressor_frequency} victim_frequency = {victim_frequency}')
-            domain.set_receiver(victim, victim_band, victim_frequency)
+            pivot_results += f'{aggressor},{aggressor_band},{aggressor_frequency},{victim},{victim_band},{victim_frequency},{emi[aggressor_index][victim_index]},{rx_power[aggressor_index][victim_index]},{desense[aggressor_index][victim_index]},{sensitivity[aggressor_index][victim_index]}\n'
 
-            instance = interaction.get_instance(domain)
+    print(pivot_results)
+    with open(csv_file, 'w') as file:
+        file.write(pivot_results)
 
-            if instance.has_valid_values():
-                emi_line.append(instance.get_value(ResultType.EMI))  # dB
-                rx_power_line.append(instance.get_value(ResultType.POWER_AT_RX)) # dBM
-                desense_line.append(instance.get_value(ResultType.DESENSE))
-                sensitivity_line.append(instance.get_value(ResultType.SENSITIVITY))
-            else:
-                warning = instance.get_result_warning()
-                print(f'No valid values: {warning}')
+    return
 
-        emi.append(emi_line)
-        rx_power.append(rx_power_line)
-        desense.append(desense_line)
-        sensitivity.append(sensitivity_line)
-
-return emi, rx_power, desense, sensitivity
