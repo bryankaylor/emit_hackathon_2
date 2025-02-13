@@ -6,7 +6,7 @@ import pyaedt
 
 from ansys.aedt.core.emit_core.emit_constants import TxRxMode, ResultType
 
-from tx_rx_response import tx_rx_response
+from result_manager import tx_rx_response
 
 timestamp = time.time()
 os.environ["ANSYSCL_SESSION_ID"] = f"DUMMY_VALUE_{timestamp:0.0f}"
@@ -14,9 +14,8 @@ os.environ["ANSYSCL_SESSION_ID"] = f"DUMMY_VALUE_{timestamp:0.0f}"
 
 def get_data():
     project = r'D:/OneDrive - ANSYS, Inc/Documents/GitHub/AH-64 Apache Cosite.aedt'
-    desktop = pyaedt.Desktop(specified_version="2025.1", new_desktop=True)
 
-    emit = pyaedt.Emit(project=project)
+    emit = pyaedt.Emit(project=project, specified_version='2025.1', new_desktop=True, remove_lock=True)
     revision = emit.results.analyze()
     domain = emit.results.interaction_domain()
 
@@ -34,33 +33,16 @@ def get_data():
 
     print(f'{victim}:{victim_band}, {aggressor}:{aggressor_band}')
 
-    emi, rx_power, desense, sensitivity = tx_rx_response(aggressor, victim, aggressor_band, victim_band, domain, revision)
+    emi, rx_power, desense, sensitivity = tx_rx_response(aggressor, victim,
+                                                         aggressor_band, victim_band,
+                                                         domain, revision)
     return emi
 
-#xlabel = "Tx channels", ylabel= "Rx channel",
-def plot_matrix_heatmap(data, min_val=None, max_val=None,xlabel = "column index", ylabel= "row index", xticks=None, yticks=None, title="Matrix Heatmap",
+
+def plot_matrix_heatmap(data, min_val=None, max_val=None,
+                        xlabel="Column index", ylabel="Row index",
+                        xticks=None, yticks=None, title="Matrix Heatmap",
                         cmap='rainbow', show_values=True, figsize=(10, 8)):
-    """
-    Create a 2D heatmap visualization of a matrix using a rainbow color scale.
-
-    Parameters:
-    -----------
-    data : numpy.ndarray
-        2D array to visualize
-    min_val : float, optional
-        Minimum value for color scaling. If None, uses data minimum
-    max_val : float, optional
-        Maximum value for color scaling. If None, uses data maximum
-    title : str, optional
-        Title for the plot
-    cmap : str, optional
-        Colormap to use (default: 'rainbow')
-    show_values : bool, optional
-        Whether to show numerical values in each cell
-    figsize : tuple, optional
-        Figure size in inches (width, height)
-    """
-
     # Create figure and axis
     plt.figure(figsize=figsize)
 
