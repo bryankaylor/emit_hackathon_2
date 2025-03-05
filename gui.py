@@ -28,6 +28,10 @@ class Form(QDialog):
 
         self.domain = None
         self.revision = None
+        self.emi = None
+        self.rx_power = None
+        self.sensitivity = None
+        self.desense = None
 
         # Widgets
         self.projectTextBox = QLineEdit("")
@@ -39,6 +43,7 @@ class Form(QDialog):
         self.victimBandComboBox = QComboBox()
         self.aggressorBandComboBox = QComboBox()
 
+        self.extractDataButton = QPushButton("Extract Data")
         self.generateDataButton = QPushButton("Export CSV File")
         self.waterfallButton = QPushButton("Generate Waterfall EMI Plot")
 
@@ -50,6 +55,7 @@ class Form(QDialog):
         layout.addRow("Victim band:", self.victimBandComboBox)
         layout.addRow("Aggressor:", self.aggressorComboBox)
         layout.addRow("Aggressor band:", self.aggressorBandComboBox)
+        layout.addRow(self.extractDataButton)
         layout.addRow(self.generateDataButton)
         layout.addRow(self.waterfallButton)
 
@@ -60,6 +66,7 @@ class Form(QDialog):
         self.browseButton.clicked.connect(self.browse)
         self.victimComboBox.currentTextChanged.connect(self.victim_changed)
         self.aggressorComboBox.currentTextChanged.connect(self.aggressor_changed)
+        self.extractDataButton.clicked.connect(self.extract_data)
         self.generateDataButton.clicked.connect(self.generate)
         self.waterfallButton.clicked.connect(self.waterfall)
 
@@ -105,21 +112,30 @@ class Form(QDialog):
         aggressor_bands = self.revision.get_band_names(aggressor, TxRxMode.TX)
         self.aggressorBandComboBox.addItems(aggressor_bands)
 
+    def extract_data(self):
+        victim = self.victimComboBox.currentText()
+        victim_band = self.victimBandComboBox.currentText()
+        aggressor = self.aggressorComboBox.currentText()
+        aggressor_band = self.aggressorBandComboBox.currentText()
+
+        print(f'Extracting data for {victim}:{victim_band} vs {aggressor}:{aggressor_band}')
+        self.emi, self.rx_power, self.desense, self.sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band,
+                                                                            victim_band, self.domain, self.revision)
+
     def generate(self):
+        project_dir = os.path.dirname(self.projectTextBox.text())
         victim = self.victimComboBox.currentText()
         victim_band = self.victimBandComboBox.currentText()
         aggressor = self.aggressorComboBox.currentText()
         aggressor_band = self.aggressorBandComboBox.currentText()
 
         print(f'Generating data for {victim}:{victim_band} vs {aggressor}:{aggressor_band}')
-        emi, rx_power, desense, sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band, victim_band, self.domain, self.revision)
+        #emi, rx_power, desense, sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band, victim_band, self.domain, self.revision)
 
         aggressor_frequencies = self.revision.get_active_frequencies(aggressor, aggressor_band, TxRxMode.TX)
         victim_frequencies = self.revision.get_active_frequencies(victim, victim_band, TxRxMode.RX)
 
-        export_csv.export_csv("D:/pivot_table.csv", emi, rx_power, desense, sensitivity, aggressor, aggressor_band, aggressor_frequencies, victim, victim_band, victim_frequencies)
-        #for row in emi:
-        #   print(f'{row}')
+        export_csv.export_csv(os.path.join(project_dir,"pivot_table.csv"), self.emi, self.rx_power, self.desense, self.sensitivity, aggressor, aggressor_band, aggressor_frequencies, victim, victim_band, victim_frequencies)
 
     def waterfall(self):
         victim = self.victimComboBox.currentText()
@@ -128,8 +144,8 @@ class Form(QDialog):
         aggressor_band = self.aggressorBandComboBox.currentText()
 
         print(f'Generating data for {victim}:{victim_band} vs {aggressor}:{aggressor_band}')
-        emi, rx_power, desense, sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band, victim_band, self.domain, self.revision)
-        data = np.array(np.transpose(emi))
+        #emi, rx_power, desense, sensitivity = tx_rx_response.tx_rx_response(aggressor, victim, aggressor_band, victim_band, self.domain, self.revision)
+        data = np.array(np.transpose(self.emi))
 
         aggressor_frequencies = self.revision.get_active_frequencies(aggressor, aggressor_band, TxRxMode.TX)
         victim_frequencies = self.revision.get_active_frequencies(victim, victim_band, TxRxMode.RX)
