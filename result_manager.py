@@ -120,7 +120,7 @@ class RunWorker(QThread):
                         lambda: defaultdict(
                             lambda: defaultdict(Combination))))))
 
-        domain = self.resultManager.emit_app.results.interaction_domain()
+        domain = self.resultManager.emitApp.results.interaction_domain()
 
         interaction = self.resultManager.revision.run(domain)
         with self.resultManager.revision.get_license_session():
@@ -169,11 +169,26 @@ class RunWorker(QThread):
         self.finished.emit()
 
 
-class ResultManager:
-    def __init__(self, project, version='2025.1'):
-        self.emit_app = pyaedt.Emit(project=project, version=version, new_desktop=True, remove_lock=True)
-        self.revision = self.emit_app.results.analyze()
+class LoadAEDTWorker(QThread):
+    finished = Signal()
 
+    def __init__(self, project, version='2025.1'):
+        super().__init__()
+
+        self.project = project
+        self.version = version
+
+        self.emitApp = None
+
+    def run(self):
+        self.emitApp = pyaedt.Emit(project=self.project, version=self.version, new_desktop=True, remove_lock=True)
+        self.finished.emit()
+
+
+class ResultManager:
+    def __init__(self, emit_app):
+        self.emitApp = emit_app
+        self.revision = self.emitApp.results.analyze()
         self.aggressors = [Radio(name, TxRxMode.TX, self) for name in self.revision.get_interferer_names()]
         self.victims = [Radio(name, TxRxMode.RX, self) for name in self.revision.get_receiver_names()]
 
@@ -226,7 +241,7 @@ class ResultManager:
                         lambda: defaultdict(
                             lambda: defaultdict(Combination))))))
 
-        domain = self.emit_app.results.interaction_domain()
+        domain = self.emitApp.results.interaction_domain()
 
         interaction = self.revision.run(domain)
         with self.revision.get_license_session():

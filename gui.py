@@ -8,7 +8,7 @@ import numpy as np
 
 from ansys.aedt.core.emit_core.emit_constants import TxRxMode
 
-from result_manager import ResultManager, RunWorker, get_results
+from result_manager import LoadAEDTWorker, ResultManager, RunWorker, get_results
 import waterfall
 from export_csv import export_csv
 
@@ -29,8 +29,10 @@ class Form(QMainWindow):
 
         self.setWindowTitle("EMIT Hackathon 2")
 
+        self.emitApp = None
         self.resultManager = None
         self.results = None
+        self.loadWorker = None
         self.runWorker = None
         self.projectFilePath = None
 
@@ -146,15 +148,11 @@ class Form(QMainWindow):
             self.statusBar.showMessage(f'Loading project {project_name}...')
             self.projectTextBox.setText(project_name)
             self.projectTextBox.setToolTip(self.projectFilePath)
-            self.resultManager = ResultManager(self.projectFilePath)
-
-            self.victimComboBox.addItems([victim.name for victim in self.resultManager.victims])
-            self.aggressorComboBox.addItems([aggressor.name for aggressor in self.resultManager.aggressors])
-            self.statusBar.showMessage('Ready')
+            self.load_aedt_worker_start()
         else:
             self.projectFilePath = None
             self.projectTextBox.setText('')
-            self.projectTextBox.toolTip('')
+            self.projectTextBox.setToolTip('')
 
     def victim_changed(self):
         self.victimBandComboBox.clear()
@@ -177,6 +175,20 @@ class Form(QMainWindow):
 
     def aggressor_band_changed(self):
         self.set_actions_enabled(False)
+
+    def load_aedt_worker_start(self):
+        self.loadWorker = LoadAEDTWorker(self.projectFilePath)
+        self.loadWorker.finished.connect(self.load_aedt_worker_complete)
+        self.loadWorker.start()
+
+    def load_aedt_worker_complete(self):
+        if self.loadWorker:
+            self.emitApp = self.loadWorker.emitApp
+            self.resultManager = ResultManager(self.emitApp)
+            self.victimComboBox.addItems([victim.name for victim in self.resultManager.victims])
+            self.aggressorComboBox.addItems([aggressor.name for aggressor in self.resultManager.aggressors])
+            self.statusBar.showMessage('Ready')
+            self.loadWorker = None
 
     def run_start(self):
         victim_name = self.victimComboBox.currentText()
