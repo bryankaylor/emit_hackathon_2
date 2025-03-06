@@ -6,7 +6,7 @@ import pyaedt
 
 from ansys.aedt.core.emit_core.emit_constants import TxRxMode, ResultType
 
-from result_manager import tx_rx_response
+from result_manager import ResultManager, get_results
 
 timestamp = time.time()
 os.environ["ANSYSCL_SESSION_ID"] = f"DUMMY_VALUE_{timestamp:0.0f}"
@@ -14,28 +14,23 @@ os.environ["ANSYSCL_SESSION_ID"] = f"DUMMY_VALUE_{timestamp:0.0f}"
 
 def get_data():
     project = r'D:/OneDrive - ANSYS, Inc/Documents/GitHub/AH-64 Apache Cosite.aedt'
+    result_manager = ResultManager(project)
 
-    emit = pyaedt.Emit(project=project, specified_version='2025.1', new_desktop=True, remove_lock=True)
-    revision = emit.results.analyze()
-    domain = emit.results.interaction_domain()
-
-    victims = revision.get_receiver_names()
-    aggressors = revision.get_interferer_names()
+    victims = result_manager.revision.get_receiver_names()
+    aggressors = result_manager.revision.get_interferer_names()
 
     victim = victims[0]
     aggressor = aggressors[1]
 
-    victim_bands = revision.get_band_names(victim, TxRxMode.RX)
-    aggressor_bands = revision.get_band_names(aggressor, TxRxMode.TX)
+    victim_bands = result_manager.revision.get_band_names(victim, TxRxMode.RX)
+    aggressor_bands = result_manager.revision.get_band_names(aggressor, TxRxMode.TX)
 
     victim_band = victim_bands[0]
     aggressor_band = aggressor_bands[0]
 
     print(f'{victim}:{victim_band}, {aggressor}:{aggressor_band}')
-
-    emi, rx_power, desense, sensitivity = tx_rx_response(aggressor, victim,
-                                                         aggressor_band, victim_band,
-                                                         domain, revision)
+    combos = result_manager.get_combos(aggressor, victim, aggressor_band, victim_band)
+    emi, _, _, _ = get_results(combos)
     return emi
 
 
