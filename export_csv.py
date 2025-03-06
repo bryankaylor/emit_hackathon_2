@@ -14,5 +14,8 @@ def export_csv(csv_file, emi, rx_power, desense, sensitivity,
                              f'{emi[ai][vi]},{rx_power[ai][vi]},{desense[ai][vi]},{sensitivity[ai][vi]}\n'
 
     print(pivot_results)
+    size = 0
     with open(csv_file, 'w') as file:
-        file.write(pivot_results)
+        size = file.write(pivot_results)
+
+    return size

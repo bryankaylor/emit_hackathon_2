@@ -253,13 +253,13 @@ class Form(QMainWindow):
 
             project_path = self.projectFilePath
             project_dir = os.path.dirname(project_path)
-            pivot_table_path = os.path.join(project_dir, 'pivot_table.csv')
-            export_csv(pivot_table_path, emi, rx_power, desense, sensitivity,
-                       aggressor_name, aggressor_band, aggressor_frequencies,
-                       victim_name, victim_band, victim_frequencies)
+            pivot_table_path = os.path.normpath(os.path.join(project_dir, 'pivot_table.csv'))
+            size = export_csv(pivot_table_path, emi, rx_power, desense, sensitivity,
+                              aggressor_name, aggressor_band, aggressor_frequencies,
+                              victim_name, victim_band, victim_frequencies)
 
             message_time = 5*1000
-            self.statusBar.showMessage(f'Wrote {pivot_table_path}.', message_time)
+            self.statusBar.showMessage(f'Wrote {size} bytes to \'pivot_table.csv\'.', message_time)
             QTimer.singleShot(message_time, lambda: self.statusBar.showMessage('Ready'))
 
     def waterfall(self):
