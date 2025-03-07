@@ -131,9 +131,8 @@ class Form(QMainWindow):
             filenames = dialog.selectedFiles()
             if filenames:
                 selected_project = filenames[0]
-
-        self.projectFilePath = selected_project
-        self.project_changed()
+                self.projectFilePath = selected_project
+                self.project_changed()
 
     def project_changed(self):
         self.victimComboBox.clear()
