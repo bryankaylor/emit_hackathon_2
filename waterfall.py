@@ -2,7 +2,6 @@ import os
 import time
 import matplotlib.pyplot as plt
 import numpy as np
-import pyaedt
 
 from ansys.aedt.core.emit_core.emit_constants import TxRxMode, ResultType
 
