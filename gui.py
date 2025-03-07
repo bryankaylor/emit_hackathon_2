@@ -13,6 +13,7 @@ import waterfall
 from export_csv import export_csv
 
 from PySide6.QtCore import QTimer
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QLineEdit, QPushButton, QComboBox, QFileDialog, \
                               QGroupBox, QMainWindow, QGridLayout, QStatusBar, QProgressBar, QLabel, QWidget
 
@@ -27,7 +28,8 @@ class Form(QMainWindow):
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
 
-        self.setWindowTitle("EMIT Hackathon 2")
+        self.setWindowTitle("EMIT Hackathon Toolkit")
+        self.setWindowIcon(QIcon('assets/emit.png'))
 
         self.emitApp = None
         self.resultManager = None
