@@ -67,31 +67,53 @@ def plot_matrix_heatmap(data, min_val=None, max_val=None,xlabel = "column index"
         min_val = np.min(data)
     if max_val is None:
         max_val = np.max(data)
-    vmin = -200
-    vmax = 200
+    # vmin = -200
+    # vmax = 200
+    vmin = min_val
+    vmax = max_val
     v = vmax-vmin
     r = (red_threshold-vmin)/v
     y = (yellow_threshold-vmin)/v
 
     # Define color segments with positions
+    # cdict = {
+    #     'red': [[0.0, 0.0, 0.0],  # green
+    #             [y, 0.0, 1.0],  # yellow at y#-10
+    #             [r, 1.0, 1.0],  # red starts at 0
+    #             [1.0, 1.0, 1.0]],  # red
+    #     'green': [[0.0, 1.0, 1.0],  # green
+    #               [y, 1.0, 1.0],  # yellow at -10
+    #               [r, 1.0, 0.0],  # transition to red at 0
+    #               [1.0, 0.0, 0.0]],  # red
+    #     'blue': [[0.0, 0.0, 0.0],  # green
+    #              [y, 0.0, 0.0],  # yellow at -10
+    #              [r, 0.0, 0.0],  # red
+    #              [1.0, 0.0, 0.0]]  # red
+    # }
     cdict = {
-        'red': [[0.0, 0.0, 0.0],  # green
-                [y, 0.0, 1.0],  # yellow at -10
-                [r, 1.0, 1.0],  # red starts at 0
-                [1.0, 1.0, 1.0]],  # red
-        'green': [[0.0, 1.0, 1.0],  # green
-                  [y, 1.0, 1.0],  # yellow at -10
-                  [r, 1.0, 0.0],  # transition to red at 0
-                  [1.0, 0.0, 0.0]],  # red
-        'blue': [[0.0, 0.0, 0.0],  # green
-                 [y, 0.0, 0.0],  # yellow at -10
-                 [r, 0.0, 0.0],  # red
-                 [1.0, 0.0, 0.0]]  # red
+        'red': [(0.0, 0.0, 0.0),  # green
+                (y, 0.0, 0.0),  # green up to yellow threshold
+                (y, 1.0, 1.0),  # sharp transition to yellow
+                (r, 1.0, 1.0),  # yellow up to red threshold
+                (r, 1.0, 1.0),  # sharp transition to red
+                (1.0, 1.0, 1.0)],  # red
+
+        'green': [(0.0, 1.0, 1.0),  # green
+                  (y, 1.0, 1.0),  # green up to yellow threshold
+                  (y, 1.0, 1.0),  # sharp transition to yellow
+                  (r, 1.0, 1.0),  # yellow up to red threshold
+                  (r, 0.0, 0.0),  # sharp transition to red
+                  (1.0, 0.0, 0.0)],  # red
+
+        'blue': [(0.0, 0.0, 0.0),  # green
+                 (y, 0.0, 0.0),  # yellow threshold
+                 (r, 0.0, 0.0),  # red threshold
+                 (1.0, 0.0, 0.0)]  # red
     }
     custom_cmap = LinearSegmentedColormap('custom', cdict)
 
     # Use in imshow
-    im = plt.imshow(data, cmap=custom_cmap, vmin=-200, vmax=200, aspect='auto')#min_val, vmax=max_val)
+    im = plt.imshow(data, cmap=custom_cmap, vmin=min_val, vmax=max_val, aspect='auto')#-200, vmax=200, aspect='auto')#min_val, vmax=max_val)
     # Create the heatmap
     # im = plt.imshow(data, cmap=cmap, vmin=min_val, vmax=max_val) #extent=[xticks[0],xticks[-1],yticks[0],yticks[-1]])
 

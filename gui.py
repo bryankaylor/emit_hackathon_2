@@ -151,8 +151,8 @@ class Form(QDialog):
         victim_frequencies = self.revision.get_active_frequencies(victim, victim_band, TxRxMode.RX)
         category_node = self.revision.get_result_categorization_node()
         props = category_node.properties['EmiThresholdList']
-        red = int(props.split(';')[0])
-        yellow = int(props.split(';')[1])
+        red = float(props.split(';')[0])
+        yellow = float(props.split(';')[1])
         Claude_Test_EMI_Waterfall.plot_matrix_heatmap(data, xticks=aggressor_frequencies, yticks=victim_frequencies, xlabel = "Tx channels", ylabel= "Rx channel", title="EMI Waterfall {}".format(self.projectTextBox.text()), red_threshold=red, yellow_threshold=yellow)
         plt.show()
 
