@@ -55,12 +55,8 @@ def plot_matrix_heatmap(data, min_val=None, max_val=None,xlabel = "column index"
         Maximum value for color scaling. If None, uses data maximum
     title : str, optional
         Title for the plot
-    cmap : str, optional
-        Colormap to use (default: 'rainbow')
     show_values : bool, optional
         Whether to show numerical values in each cell
-    figsize : tuple, optional
-        Figure size in inches (width, height)
     """
 
     # Create figure and axis
@@ -71,25 +67,25 @@ def plot_matrix_heatmap(data, min_val=None, max_val=None,xlabel = "column index"
         min_val = np.min(data)
     if max_val is None:
         max_val = np.max(data)
-    # vmin = -200
-    # vmax = 200
-    # v = vmin+vmax
-    # r = (red_threshold-vmin)/v
-    # y =
+    vmin = -200
+    vmax = 200
+    v = vmax-vmin
+    r = (red_threshold-vmin)/v
+    y = (yellow_threshold-vmin)/v
 
     # Define color segments with positions
     cdict = {
         'red': [[0.0, 0.0, 0.0],  # green
-                [0.475, 0.0, 1.0],  # yellow at -10
-                [0.5, 1.0, 1.0],  # red starts at 0
+                [y, 0.0, 1.0],  # yellow at -10
+                [r, 1.0, 1.0],  # red starts at 0
                 [1.0, 1.0, 1.0]],  # red
         'green': [[0.0, 1.0, 1.0],  # green
-                  [0.475, 1.0, 1.0],  # yellow at -10
-                  [0.5, 1.0, 0.0],  # transition to red at 0
+                  [y, 1.0, 1.0],  # yellow at -10
+                  [r, 1.0, 0.0],  # transition to red at 0
                   [1.0, 0.0, 0.0]],  # red
         'blue': [[0.0, 0.0, 0.0],  # green
-                 [0.475, 0.0, 0.0],  # yellow at -10
-                 [0.5, 0.0, 0.0],  # red
+                 [y, 0.0, 0.0],  # yellow at -10
+                 [r, 0.0, 0.0],  # red
                  [1.0, 0.0, 0.0]]  # red
     }
     custom_cmap = LinearSegmentedColormap('custom', cdict)

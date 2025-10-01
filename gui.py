@@ -93,7 +93,7 @@ class Form(QDialog):
         project_is_aedt = (os.path.splitext(project)[1] == ".aedt")
         if project_exists and project_is_aedt:
             print(f'Loading project {self.projectTextBox.text()}')
-            aggressors, victims, domain, revision = tx_rx_response.get_radios(project, "2025.1")
+            aggressors, victims, domain, revision = tx_rx_response.get_radios(project, "2025.2")
             self.domain = domain
             self.revision = revision
 
@@ -149,8 +149,11 @@ class Form(QDialog):
 
         aggressor_frequencies = self.revision.get_active_frequencies(aggressor, aggressor_band, TxRxMode.TX)
         victim_frequencies = self.revision.get_active_frequencies(victim, victim_band, TxRxMode.RX)
-
-        Claude_Test_EMI_Waterfall.plot_matrix_heatmap(data, xticks=aggressor_frequencies, yticks=victim_frequencies, xlabel = "Tx channels", ylabel= "Rx channel", title="EMI Waterfall {}".format(self.projectTextBox.text()))
+        category_node = self.revision.get_result_categorization_node()
+        props = category_node.properties['EmiThresholdList']
+        red = int(props.split(';')[0])
+        yellow = int(props.split(';')[1])
+        Claude_Test_EMI_Waterfall.plot_matrix_heatmap(data, xticks=aggressor_frequencies, yticks=victim_frequencies, xlabel = "Tx channels", ylabel= "Rx channel", title="EMI Waterfall {}".format(self.projectTextBox.text()), red_threshold=red, yellow_threshold=yellow)
         plt.show()
 
 def main():

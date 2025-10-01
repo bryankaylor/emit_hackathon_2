@@ -18,7 +18,7 @@ def get_radios(project, version):
     # Launch the EMIT design of interest
     #
     #project = r'D:\Designs\Electronics_Desktop_2025\EMIT\AH-64 Apache Cosite.aedt'
-    desktop = pyaedt.Desktop(specified_version="2025.1", new_desktop=True)
+    desktop = pyaedt.Desktop(specified_version="2025.2", new_desktop=True)
 
     # Link to the results from the latest simulation
     #
