@@ -5,7 +5,7 @@ import numpy as np
 import pyaedt
 
 from ansys.aedt.core.emit_core.emit_constants import TxRxMode, ResultType
-
+from matplotlib.colors import LinearSegmentedColormap
 from tx_rx_response import tx_rx_response
 
 timestamp = time.time()
@@ -38,8 +38,10 @@ def get_data():
     return emi
 
 #xlabel = "Tx channels", ylabel= "Rx channel",
-def plot_matrix_heatmap(data, min_val=None, max_val=None,xlabel = "column index", ylabel= "row index", xticks=None, yticks=None, title="Matrix Heatmap",
-                        cmap='rainbow', show_values=True, figsize=(10, 8)):
+def plot_matrix_heatmap(data, min_val=None, max_val=None,xlabel = "column index", ylabel= "row index",
+                        xticks=None, yticks=None, title="Matrix Heatmap", show_values=True,
+                        red_threshold=0,
+                        yellow_threshold=-10):
     """
     Create a 2D heatmap visualization of a matrix using a rainbow color scale.
 
@@ -53,25 +55,67 @@ def plot_matrix_heatmap(data, min_val=None, max_val=None,xlabel = "column index"
         Maximum value for color scaling. If None, uses data maximum
     title : str, optional
         Title for the plot
-    cmap : str, optional
-        Colormap to use (default: 'rainbow')
     show_values : bool, optional
         Whether to show numerical values in each cell
-    figsize : tuple, optional
-        Figure size in inches (width, height)
     """
 
     # Create figure and axis
-    plt.figure(figsize=figsize)
+    plt.figure()
 
     # If min_val and max_val aren't provided, use data bounds
     if min_val is None:
         min_val = np.min(data)
     if max_val is None:
         max_val = np.max(data)
+    # vmin = -200
+    # vmax = 200
+    vmin = min_val
+    vmax = max_val
+    v = vmax-vmin
+    r = (red_threshold-vmin)/v
+    y = (yellow_threshold-vmin)/v
 
+    # Define color segments with positions
+    # cdict = {
+    #     'red': [[0.0, 0.0, 0.0],  # green
+    #             [y, 0.0, 1.0],  # yellow at y#-10
+    #             [r, 1.0, 1.0],  # red starts at 0
+    #             [1.0, 1.0, 1.0]],  # red
+    #     'green': [[0.0, 1.0, 1.0],  # green
+    #               [y, 1.0, 1.0],  # yellow at -10
+    #               [r, 1.0, 0.0],  # transition to red at 0
+    #               [1.0, 0.0, 0.0]],  # red
+    #     'blue': [[0.0, 0.0, 0.0],  # green
+    #              [y, 0.0, 0.0],  # yellow at -10
+    #              [r, 0.0, 0.0],  # red
+    #              [1.0, 0.0, 0.0]]  # red
+    # }
+    cdict = {
+        'red': [(0.0, 0.0, 0.0),  # green
+                (y, 0.0, 0.0),  # green up to yellow threshold
+                (y, 1.0, 1.0),  # sharp transition to yellow
+                (r, 1.0, 1.0),  # yellow up to red threshold
+                (r, 1.0, 1.0),  # sharp transition to red
+                (1.0, 1.0, 1.0)],  # red
+
+        'green': [(0.0, 1.0, 1.0),  # green
+                  (y, 1.0, 1.0),  # green up to yellow threshold
+                  (y, 1.0, 1.0),  # sharp transition to yellow
+                  (r, 1.0, 1.0),  # yellow up to red threshold
+                  (r, 0.0, 0.0),  # sharp transition to red
+                  (1.0, 0.0, 0.0)],  # red
+
+        'blue': [(0.0, 0.0, 0.0),  # green
+                 (y, 0.0, 0.0),  # yellow threshold
+                 (r, 0.0, 0.0),  # red threshold
+                 (1.0, 0.0, 0.0)]  # red
+    }
+    custom_cmap = LinearSegmentedColormap('custom', cdict)
+
+    # Use in imshow
+    im = plt.imshow(data, cmap=custom_cmap, vmin=min_val, vmax=max_val, aspect='auto')#-200, vmax=200, aspect='auto')#min_val, vmax=max_val)
     # Create the heatmap
-    im = plt.imshow(data, cmap=cmap, vmin=min_val, vmax=max_val) #extent=[xticks[0],xticks[-1],yticks[0],yticks[-1]])
+    # im = plt.imshow(data, cmap=cmap, vmin=min_val, vmax=max_val) #extent=[xticks[0],xticks[-1],yticks[0],yticks[-1]])
 
     # Add colorbar
     plt.colorbar(im, label='Values')
