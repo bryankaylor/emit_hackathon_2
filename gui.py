@@ -93,7 +93,7 @@ class Form(QDialog):
         project_is_aedt = (os.path.splitext(project)[1] == ".aedt")
         if project_exists and project_is_aedt:
             print(f'Loading project {self.projectTextBox.text()}')
-            aggressors, victims, domain, revision = tx_rx_response.get_radios(project, "2025.2")
+            aggressors, victims, domain, revision = tx_rx_response.get_radios(project, "2026.1")
             self.domain = domain
             self.revision = revision
 
@@ -103,13 +103,13 @@ class Form(QDialog):
     def victim_changed(self):
         self.victimBandComboBox.clear()
         victim = self.victimComboBox.currentText()
-        victim_bands = self.revision.get_band_names(victim, TxRxMode.RX)
+        victim_bands = self.revision.get_band_names(radio_name=victim, tx_rx_mode=TxRxMode.RX)
         self.victimBandComboBox.addItems(victim_bands)
 
     def aggressor_changed(self):
         self.aggressorBandComboBox.clear()
         aggressor = self.aggressorComboBox.currentText()
-        aggressor_bands = self.revision.get_band_names(aggressor, TxRxMode.TX)
+        aggressor_bands = self.revision.get_band_names(radio_name=aggressor, tx_rx_mode=TxRxMode.TX)
         self.aggressorBandComboBox.addItems(aggressor_bands)
 
     def extract_data(self):
@@ -153,8 +153,8 @@ class Form(QDialog):
         props = category_node.properties['EmiThresholdList']
         red = float(props.split(';')[0])
         yellow = float(props.split(';')[1])
-        Claude_Test_EMI_Waterfall.plot_matrix_heatmap(data, xticks=aggressor_frequencies, yticks=victim_frequencies, xlabel = "Tx channels", ylabel= "Rx channel", title="EMI Waterfall {}".format(self.projectTextBox.text()), red_threshold=red, yellow_threshold=yellow)
-        plt.show()
+        waterfall = Claude_Test_EMI_Waterfall.plot_matrix_heatmap(data, xticks=aggressor_frequencies, yticks=victim_frequencies, xlabel = "Tx channels", ylabel= "Rx channel", title="EMI Waterfall {}".format(self.projectTextBox.text()), red_threshold=red, yellow_threshold=yellow)
+        #waterfall.show()
 
 def main():
     app = QApplication(sys.argv)
