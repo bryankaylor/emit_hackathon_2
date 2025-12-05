@@ -154,7 +154,7 @@ class Form(QDialog):
         red = float(props.split(';')[0])
         yellow = float(props.split(';')[1])
         waterfall = Claude_Test_EMI_Waterfall.plot_matrix_heatmap(data, xticks=aggressor_frequencies, yticks=victim_frequencies, xlabel = "Tx channels", ylabel= "Rx channel", title="EMI Waterfall {}".format(self.projectTextBox.text()), red_threshold=red, yellow_threshold=yellow)
-        #waterfall.show()
+        waterfall.show()
 
 def main():
     app = QApplication(sys.argv)
